@@ -3,19 +3,18 @@ import static org.junit.Assert.*;
 /**
  * Created by 48089748z on 07/04/16.
  */
-public class Testing
-{
+public class Testing {
     @org.junit.Test
-    public void testSuma() throws Exception
-    {
-        assertEquals(3, 1, 2);  //1+2=3
-        assertEquals(4, 2, 2);  //2+2=4
-        assertEquals(2, 1, 1);  //1+1=2
-    }
+    public void testing() throws Exception {
+        ToBeTested toBeTested = new ToBeTested();
 
-    @org.junit.Test
-    public void testResta() throws Exception
-    {
-        assertEquals(2, 4, 2);  //4 - 2 = 2
+        assertEquals(3, (Object) toBeTested.suma(1, 2));
+
+        assertEquals(1, (Object) toBeTested.resta(2, 1));
+
+        assertEquals(4, (Object) toBeTested.multiplicacio(2, 2));
+
+        assertEquals(5, (Object) toBeTested.divisio(10, 2));
     }
 }
+
